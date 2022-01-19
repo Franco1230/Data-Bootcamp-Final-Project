@@ -1,24 +1,26 @@
-feature_list = ["Suburb",
-                "Address",
-                "Rooms",
-                "Type",
-                "Date",
-                "Distance",
-                "Postcode",
-                "Bathroom",
-                "Car",
-                "Landsize",
-                "BuildingArea",
-                "YearBuilt",
-                "CouncilArea",
-                "Lattitude",
-                "Longtitude",
-                "Regionname",
-                "Propertycount",
-                "CrimeRate",
-                "NearbySchools",
-                "Price",
-                "Prediction"]
+feature_list = [
+    "Suburb",
+    "Address",
+    "Rooms",
+    "Type",
+    "Date",
+    "Distance",
+    "Postcode",
+    "Bathroom",
+    "Car",
+    "Landsize",
+    "BuildingArea",
+    "YearBuilt",
+    "CouncilArea",
+    "Lattitude",
+    "Longtitude",
+    "Regionname",
+    "Propertycount",
+    "CrimeRate",
+    "NearbySchools",
+    "Price",
+    "Prediction"
+]
 
 feature_form_structure = {
     "General": [
@@ -363,7 +365,6 @@ feature_form_structure = {
                     "10": "10",
                     "11": "11",
                     "12": "12",
-
                 }
             }
         },
@@ -393,6 +394,61 @@ feature_form_structure = {
                     "8": "8",
                     "9": "9",
                 }
+            }
+        },
+        {
+            "Label": "CouncilArea",
+            "Data":{
+                "Description": "Please select a council",
+                "Form": {
+                    "1": "Glen Eira City Council",
+                    "2": "Darebin City Council",
+                    "3": "Maribyrnong City Council",
+                    "4": "Brimbank City Council",
+                    "5": "Moreland City Council",
+                    "6": "Boroondara City Council",
+                    "7": "Melton City Council",
+                    "8": "Moonee Valley City Council",
+                    "9": "Hobsons Bay City Council",
+                    "10": "Greater Dandenong City Council",
+                    "11": "Kingston City Council",
+                    "12": "Hume City Council",
+                    "13": "Wyndham City Council",
+                    "14": "Yarra City Council",
+                    "15": "Whittlesea City Council",
+                    "16": "Port Phillip City Council",
+                    "17": "Melbourne City Council",
+                    "18": "Banyule City Council",
+                    "19": "Mitchell Shire Council",
+                    "20": "Bayside City Council",
+                    "21": "Frankston City Council",
+                    "22": "Monash City Council",
+                    "23": "Casey City Council",
+                    "24": "Stonnington City Council",
+                    "25": "Moorabool Shire Council",
+                    "26": "Macedon Ranges Shire Council",
+                    "27": "Cardinia Shire Council",
+                    "28": "Manningham City Council",
+                    "29": "Nillumbik Shire Council",
+                    "30": "Knox City Council",
+                    "31": "Yarra Ranges Shire Council",
+                    "32": "Maroondah City Council",
+                    "33": "Whitehorse City Council",
+                }
+
+            }
+        },
+        {
+            "Label": "Regionname",
+            "Form": {
+                "1": "Southern Metropolitan",
+                "2": "Northern Metropolitan",
+                "3": "Western Metropolitan",
+                "4": "Western Victoria",
+                "5": "South-Eastern Metropolitan",
+                "6": "Northern Victoria",
+                "7": "Eastern Metropolitan",
+                "8": "Eastern Victoria",
             }
         }
     ]
