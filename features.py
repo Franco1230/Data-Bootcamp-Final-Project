@@ -440,16 +440,19 @@ feature_form_structure = {
         },
         {
             "Label": "Regionname",
-            "Form": {
-                "1": "Southern Metropolitan",
-                "2": "Northern Metropolitan",
-                "3": "Western Metropolitan",
-                "4": "Western Victoria",
-                "5": "South-Eastern Metropolitan",
-                "6": "Northern Victoria",
-                "7": "Eastern Metropolitan",
-                "8": "Eastern Victoria",
+            "Data": {
+                "Description": "Please select a region",
+                "Form": {
+                    "1": "Southern Metropolitan",
+                    "2": "Northern Metropolitan",
+                    "3": "Western Metropolitan",
+                    "4": "Western Victoria",
+                    "5": "South-Eastern Metropolitan",
+                    "6": "Northern Victoria",
+                    "7": "Eastern Metropolitan",
+                    "8": "Eastern Victoria",
+                }
             }
         }
     ]
-}                
+}
