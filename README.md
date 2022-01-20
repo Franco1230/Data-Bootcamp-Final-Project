@@ -19,6 +19,7 @@ For the model to learn and train properly, all 0 and NaN are removed from the da
 
 ### Machine Learning
 3 different ML models were made, Decision Tree, Logistic Regression and Random Forest. As the Random Forest model gets the highest accuracy point the project would use the this model for prediction. The predicted price is then added to the original dataset for visulization
+![comparison image](images/comparison.png)
 
 ### Visualization
 Tableau is used for visualization for all different features.
