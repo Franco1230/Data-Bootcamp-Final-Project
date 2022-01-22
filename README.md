@@ -25,28 +25,48 @@ The analysis is based on the factors that could potentially affect the house pri
    Hypothesis - Higher demand exists in suburbs with more schools in neighborhood. This is especially important for young families. Hence, it will drive the house prices.
 
 3. Crime rate: 
-   Hypothesis - rime rate cannot provide the resident sense of security to the residents, thus not many would like to move in. This is a critical element to affect house price. 3 years of data was analized to try find out the relationship between crime rate and house price.
+   Hypothesis - Crime rate affects the market prices indirectly as people would prefer to live in suburb that is safe and secure. 3 years of data was analized to try find out the relationship between crime rate and house price.
 
 4. No of Rooms / Bathrooms / Car park
-   Hypothesis - 
+   Hypothesis - Either of these features have direct impact on the house prices.
 
 
-## A simple web page is built for users to enter input (features) to predict house prices.
 
-
+### Operating environment
+1. Launguage - Python / Javascript / HTML / CSS3
+2. Server - Python / Flask
+3. Visualisation - Tableau
+4. User - Web Browser
 
 ### Data Cleaning
 For the model to learn and train properly, all 0 and NaN are removed from the dataset.
+
 
 ### Machine Learning
 3 different ML models were made, Decision Tree, Logistic Regression and Random Forest. As the Random Forest model gets the highest accuracy point the project would use the this model for prediction. The predicted price is then added to the original dataset for visulization
 ![comparison image](images/comparison.png)
 
+
 ### Visualization
-Tableau is used for visualization for all different features.
+Tableau is used for visualization for the relationship between the features and the house prices. 
+We also used it to compare the results between the Actual Prices and Prediction Prices
 
-### Coding
-This project 
-
-
+## As the final outcome, a simple web page is built for users to enter input (features) to predict house prices.
 ### Application
+We used python and flask to build the website and testing the results. We created a JSON map of features and values to allow user to freely choose. Once they make the request, the application will receive and return a response containing the predicted price.
+
+
+## Results and Discussion
+### Screenshot of the application
+
+
+
+## Limitation
+
+
+
+
+## Conclusion
+
+
+## References
