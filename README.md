@@ -43,7 +43,7 @@ The analysis is based on the factors that could potentially affect the house pri
 2. Next, some columns were formatted to the proper sign to avoid any error.
 3. Also removed some rows that has the 0 values as we deemed those info as inaccurate.
 
-![cleaning image](images/datacleaning.png)
+![cleaning image](images/datacleaning.PNG)
 
 ### Machine Learning
 1. Feature transformation to make the data compatible to the model that we used. We also split the data into testing and training data
