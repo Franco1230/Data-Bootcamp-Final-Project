@@ -14,7 +14,7 @@ feature_list = [
 feature_form_structure = {
     "General": [
         {
-            "Label": "Room Number",
+            "Label": "RoomNumber",
             "Data": {
                 "Description": "Please choose room number",
                 "Form": {
@@ -34,17 +34,21 @@ feature_form_structure = {
             }
         },
         {
-            "Label": "Distance from CBD",
+            "Label": "DistanceFromCBD",
             "Data": {
                 "Description": "Please choose distance from CBD",
                 "Form": {
-                    "1": "1",
+                    "Very close to CBD": "0-9.5",
+                    "close to CBD": "9.7-19.6",
+                    "Middle distance from CBD": "19.9-28.5",
+                    "far from CBD": "28.8-38",
+                    "Very far from CBD": "39-48.1",
 
                 }
             }
         },
         {
-            "Label": "Number of bathroom",
+            "Label": "NumberOfBathroom",
             "Data": {
                 "Description": "Please choose number of bathroom",
                 "Form": {
@@ -62,7 +66,7 @@ feature_form_structure = {
             }
         },
         {
-            "Label": "Number of car park",
+            "Label": "NumberOfCarPark",
             "Data": {
                 "Description": "Please choose number of car park",
                 "Form": {
@@ -89,9 +93,9 @@ feature_form_structure = {
             }
         },
         {
-            "Label": "Amount of Landsize",
+            "Label": "AmountOfLandSize",
             "Data": {
-                "Description": "Please choose amount of landsize",
+                "Description": "Please choose Land size in m2",
                 "Form": {
                     "1-100": "1-100",
                     "101-200": "101-200",
@@ -143,9 +147,9 @@ feature_form_structure = {
             }
         },
         {
-            "Label": "Amount of BuildingArea",
+            "Label": "AmountOfBuildingArea",
             "Data": {
-                "Description": "Please choose amount of BuildingArea",
+                "Description": "Please choose amount of Building Area in m2",
                 "Form": {
                     "1-100": "1-100",
                     "101-200": "101-200",
@@ -161,7 +165,7 @@ feature_form_structure = {
             }
         },
         {
-            "Label": "YearBuilt",
+            "Label": "YearBuiltRanges",
             "Data": {
                 "Description": "Please choose the YearBuilt ranges",
                 "Form": {
@@ -186,7 +190,7 @@ feature_form_structure = {
             }
         },
         {
-            "Label": "Number of PropertyCount",
+            "Label": "NumberOfPropertyCount",
             "Data": {
                 "Description": "Please choose number of property count",
                 "Form": {
@@ -199,7 +203,7 @@ feature_form_structure = {
             }
         },
         {
-            "Label": "Number of CrimeRate",
+            "Label": "NumberOfCrimeRate",
             "Data": {
                 "Description": "Please choose among crime rate ranges",
                 "Form": {
@@ -212,9 +216,9 @@ feature_form_structure = {
             }
         },
         {
-            "Label": "Number of NearbySchools",
+            "Label": "NumberOfNearbySchools",
             "Data": {
-                "Description": "Please choose number of near by schhols",
+                "Description": "Please choose number of nearby schools",
                 "Form": {
                     "0": "0",
                     "1": "1",
