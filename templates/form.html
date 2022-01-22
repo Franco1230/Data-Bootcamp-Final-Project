@@ -1,67 +1,112 @@
 <form>
-
-    {% for key in feature_form_structure %}
-
-    <div id="{{ key }}_id" class="type-h3">{{ key }}</div>
-
-    {% for feature in feature_form_structure[key] %}
-
+    <div id="General_id" class="type-h3">Attributes</div>
     <div class="form-group">
-
-        <label for="{{ feature['Label'] }}">{{ feature['Data']['Description'] }}</label>
-
-        {% if feature['Data']['Form'] == 'int64' %}
-
+        <label for="RoomNumber">Please choose room number</label>
         <div class="container-fuild">
-
             <div class="row">
-
                 <div class="col-md-5">
-
-                    <input type="number" class="form-control" id="{{ feature['Label'] }}" placeholder="1999"
-                        value="1999" />
-
+                    <input type="number" class="form-control" id="RoomNumber" placeholder="1" value="1" />
                 </div>
-
             </div>
-
         </div>
-
-
-        {% else %}
-
-        <div class="container-fuild">
-
-            <div class="row">
-
-                <div class="col-md-5">
-
-                    <input type="number" class="form-control" id="{{ feature['Label'] }}" value="200.00"
-                        placeholder="200.00" />
-
-                </div>
-
-            </div>
-
-        </div>
-
-        {% endif %}
-
     </div>
-
-    {% endfor %}
-
-    {% endfor %}
-
+    <div class="form-group">
+        <label for="DistanceFromCBD">Please choose room number</label>
+        <div class="container-fuild">
+            <div class="row">
+                <div class="col-md-5">
+                    <input type="number" class="form-control" id="DistanceFromCBD" placeholder="Very close to CBD" value="Very close to CBD" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="NumberOfBathroom">Please choose room number</label>
+        <div class="container-fuild">
+            <div class="row">
+                <div class="col-md-5">
+                    <input type="number" class="form-control" id="NumberOfBathroom" placeholder="0" value="0" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="NumberOfCarPark">Please choose room number</label>
+        <div class="container-fuild">
+            <div class="row">
+                <div class="col-md-5">
+                    <input type="number" class="form-control" id="NumberOfCarPark" placeholder="0" value="0" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="AmountOfLandSize">Please choose room number</label>
+        <div class="container-fuild">
+            <div class="row">
+                <div class="col-md-5">
+                    <input type="number" class="form-control" id="AmountOfLandSize" placeholder="1-100" value="1-100" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="AmountOfBuildingArea">Please choose room number</label>
+        <div class="container-fuild">
+            <div class="row">
+                <div class="col-md-5">
+                    <input type="number" class="form-control" id="AmountOfBuildingArea" placeholder="1-100" value="1-100" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="YearBuiltRanges">Please choose room number</label>
+        <div class="container-fuild">
+            <div class="row">
+                <div class="col-md-5">
+                    <input type="number" class="form-control" id="YearBuiltRanges" placeholder="1861-1870" value="1861-1870" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="NumberOfPropertyCount">Please choose room number</label>
+        <div class="container-fuild">
+            <div class="row">
+                <div class="col-md-5">
+                    <input type="number" class="form-control" id="NumberOfPropertyCount" placeholder="Very Low" value="Very Low" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="NumberOfCrimeRate">Please choose room number</label>
+        <div class="container-fuild">
+            <div class="row">
+                <div class="col-md-5">
+                    <input type="number" class="form-control" id="NumberOfCrimeRate" placeholder="Very Low" value="Very Low" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="NumberOfNearbySchools">Please choose room number</label>
+        <div class="container-fuild">
+            <div class="row">
+                <div class="col-md-5">
+                    <input type="number" class="form-control" id="NumberOfNearbySchools" placeholder="0" value="0" />
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="form-group">
         <div id="results"></div>
     </div>
-
     <div class="form-group">
         <div class="btn-group">
             <a class="btn btn-primary" onclick="predictPrice()">Predict Price</a>
             <a class="btn btn-default" onclick="clear_results()">Clear</a>
         </div>
     </div>
-
 </form>
