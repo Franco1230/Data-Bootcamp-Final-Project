@@ -39,17 +39,21 @@ The analysis is based on the factors that could potentially affect the house pri
 4. User - Web Browser
 
 ### Data Cleaning
-For the model to learn and train properly, all 0 and NaN are removed from the dataset.
+1. For the model to learn and train properly, we cleaned the data to ensure that all 0 and NaN are removed from the dataset.
+2. Next, some columns were formatted to the proper sign to avoid any error.
+3. Also removed some rows that has the 0 values as we deemed those info as inaccurate.
 
+![cleaning image](images/datacleaning.png)
 
 ### Machine Learning
-3 different ML models were made, Decision Tree, Logistic Regression and Random Forest. As the Random Forest model gets the highest accuracy point the project would use the this model for prediction. The predicted price is then added to the original dataset for visulization
+1. Feature transformation to make the data compatible to the model that we used. We also split the data into testing and training data
+2. With the similar steps, we train the model with 3 different ML models, that includes Decision Tree, Logistic Regression and Random Forest. As the Random Forest model gets the highest accuracy point, we used this model to do our final house prices prediction. Finally, we merged this prediction data that we obstained to the original dataset for final visulization
 ![comparison image](images/comparison.png)
 
 
-### Visualization
-Tableau is used for visualization for the relationship between the features and the house prices. 
-We also used it to compare the results between the Actual Prices and Prediction Prices
+### Visualization Tool
+1. Tableau is used for visualization for the relationship between the features and the house prices. 
+2. We also used it to compare the results between the Actual Prices and Prediction Prices
 
 ## As the final outcome, a simple web page is built for users to enter input (features) to predict house prices.
 ### Application
@@ -57,6 +61,8 @@ We used python and flask to build the website and testing the results. We create
 
 
 ## Results and Discussion
+
+
 ### Screenshot of the application
 
 
