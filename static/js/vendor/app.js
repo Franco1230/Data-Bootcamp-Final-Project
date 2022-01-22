@@ -13,8 +13,8 @@ function display() {
   }
 }
 
-function clear_results(){
-  results.innerHTML = '';
+function clear_results() {
+  results.innerHTML = "";
 }
 
 function clear_everything() {
@@ -59,192 +59,48 @@ function submit_request() {
 }
 
 function predictPrice() {
-  
   const form_data = extract_form_data();
 
   postData("http://127.0.0.1:5000/predict", form_data)
-    .then(data => data['prediction'])
-    .then(prediction => {
+    .then((data) => data["prediction"])
+    .then((prediction) => {
       const resultsDataElement = buildResults(prediction);
-      results.innerHTML = '';
+      results.innerHTML = "";
       results.appendChild(resultsDataElement);
     });
 }
 
 const form_ids = [
-  "MSSubClass",
-  "MSZoning",
-  "LotFrontage",
-  "LotArea",
-  "Street",
-  "Alley",
-  "LotShape",
-  "LandContour",
-  "Utilities",
-  "LotConfig",
-  "LandSlope",
-  "Neighborhood",
-  "Condition1",
-  "Condition2",
-  "BldgType",
-  "HouseStyle",
-  "OverallQual",
-  "OverallCond",
+  "Rooms",
+  "Distance",
+  "Bathroom",
+  "Car",
+  "Landsize",
+  "BuildingArea",
   "YearBuilt",
-  "YearRemodAdd",
-  "RoofStyle",
-  "RoofMatl",
-  "Exterior1st",
-  "Exterior2nd",
-  "MasVnrType",
-  "MasVnrArea",
-  "ExterQual",
-  "ExterCond",
-  "Foundation",
-  "BsmtQual",
-  "BsmtCond",
-  "BsmtExposure",
-  "BsmtFinType1",
-  "BsmtFinSF1",
-  "BsmtFinType2",
-  "BsmtFinSF2",
-  "BsmtUnfSF",
-  "TotalBsmtSF",
-  "Heating",
-  "HeatingQC",
-  "CentralAir",
-  "Electrical",
-  "1stFlrSF",
-  "2ndFlrSF",
-  "LowQualFinSF",
-  "GrLivArea",
-  "BsmtFullBath",
-  "BsmtHalfBath",
-  "FullBath",
-  "HalfBath",
-  "Bedroom",
-  "Kitchen",
-  "KitchenQual",
-  "TotRmsAbvGrd",
-  "Functional",
-  "Fireplaces",
-  "FireplaceQu",
-  "GarageType",
-  "GarageYrBlt",
-  "GarageFinish",
-  "GarageCars",
-  "GarageArea",
-  "GarageQual",
-  "GarageCond",
-  "PavedDrive",
-  "WoodDeckSF",
-  "OpenPorchSF",
-  "EnclosedPorch",
-  "3SsnPorch",
-  "ScreenPorch",
-  "PoolArea",
-  "PoolQC",
-  "Fence",
-  "MiscFeature",
-  "MiscVal",
-  "MoSold",
-  "YrSold",
-  "SaleType",
-  "SaleCondition",
+  "Propertycount",
+  "CrimeRate",
+  "NearbySchools",
 ];
 
-const form_id_tranform = {
-  "1stFlrSF": "FrstFlrSF",
-  "2ndFlrSF": "SndFlrSF",
-  "3SsnPorch": "ThrdSnPorch",
-};
+const form_id_tranform = {};
 
 function isCharNumber(c) {
   return c >= "0" && c <= "9";
 }
 
-const categorical_features = [
-  "MSZoning",
-  "Street",
-  "Alley",
-  "LotShape",
-  "LandContour",
-  "Utilities",
-  "LotConfig",
-  "LandSlope",
-  "Neighborhood",
-  "Condition1",
-  "Condition2",
-  "BldgType",
-  "HouseStyle",
-  "RoofStyle",
-  "RoofMatl",
-  "Exterior1st",
-  "Exterior2nd",
-  "MasVnrType",
-  "ExterQual",
-  "ExterCond",
-  "Foundation",
-  "BsmtQual",
-  "BsmtCond",
-  "BsmtExposure",
-  "BsmtFinType1",
-  "BsmtFinType2",
-  "Heating",
-  "HeatingQC",
-  "CentralAir",
-  "Electrical",
-  "KitchenQual",
-  "Functional",
-  "FireplaceQu",
-  "GarageType",
-  "GarageFinish",
-  "GarageQual",
-  "GarageCond",
-  "PavedDrive",
-  "PoolQC",
-  "Fence",
-  "MiscFeature",
-  "SaleType",
-  "SaleCondition",
-];
+const categorical_features = [];
 
 const integer_features = [
-  "Id",
-  "MSSubClass",
-  "LotArea",
-  "OverallQual",
-  "OverallCond",
+  "Rooms",
+  "Bathroom",
+  "Car",
+  "Landsize",
+  "BuildingArea",
   "YearBuilt",
-  "YearRemodAdd",
-  "BsmtFinSF1",
-  "BsmtFinSF2",
-  "BsmtUnfSF",
-  "TotalBsmtSF",
-  "1stFlrSF",
-  "2ndFlrSF",
-  "LowQualFinSF",
-  "GrLivArea",
-  "BsmtFullBath",
-  "BsmtHalfBath",
-  "FullBath",
-  "HalfBath",
-  "BedroomAbvGr",
-  "KitchenAbvGr",
-  "TotRmsAbvGrd",
-  "Fireplaces",
-  "GarageCars",
-  "GarageArea",
-  "WoodDeckSF",
-  "OpenPorchSF",
-  "EnclosedPorch",
-  "3SsnPorch",
-  "ScreenPorch",
-  "PoolArea",
-  "MiscVal",
-  "MoSold",
-  "YrSold",
-  "SalePrice",
+  "Propertycount",
+  "CrimeRate",
+  "NearbySchools",
 ];
 
 function isNumeric(num) {
@@ -276,24 +132,24 @@ function extract_form_data() {
   return form_data;
 }
 
-const USDFormatter =  new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD'
+const USDFormatter = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
 });
 
 function buildResults(price) {
   // Create result elements
-  const priceElement = document.createElement('div');
-  const containerElement = document.createElement('div');
-  const yourPriceElement = document.createElement('div');
+  const priceElement = document.createElement("div");
+  const containerElement = document.createElement("div");
+  const yourPriceElement = document.createElement("div");
 
   // Add relevant classes
-  priceElement.classList.add('type-h3');
-  yourPriceElement.classList.add('type-sh6');
+  priceElement.classList.add("type-h3");
+  yourPriceElement.classList.add("type-sh6");
   // containerElement.classList.add('container-fluid');
 
   // Set inner text for the elements
-  yourPriceElement.innerText = 'The estimated price is';
+  yourPriceElement.innerText = "The estimated price is";
   priceElement.innerText = USDFormatter.format(parseInt(price));
 
   // Add elements to container
@@ -302,7 +158,6 @@ function buildResults(price) {
 
   return containerElement;
 }
-
 
 if ($(".side-navigation").length) {
   var closeBtn = $(".close");
