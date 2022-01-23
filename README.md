@@ -66,7 +66,7 @@ We used python and flask to build the website and testing the results. We create
 3. We have gone through by implementing different machine learning algorithms, random forest shows the highest score ; Hence, this model has been used to predict the house price in web application later. Comparison result is shown above.
 ![heatmap image](images/heatmap.png)
 
-### Screenshot of the application
+## Screenshot of the application
 
 
 
@@ -80,5 +80,5 @@ We used python and flask to build the website and testing the results. We create
 
 
 ## Conclusion
-
+House Prices are growing crazily regardless of the era we are in, as fluctuation happens over time. Through this we have tried to identify the factors that are less significant. We have used the machine learning to solve this real world problem. This solution can be tested if we have most updated data to make a better prediction. 
 
