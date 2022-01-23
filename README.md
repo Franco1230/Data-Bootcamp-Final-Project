@@ -64,7 +64,7 @@ We used python and flask to build the website and testing the results. We create
 1. Red means positive, Black means negative. The brighter the colour, the larger the correlation magnitude. Now, if you look at the chart below, bathroom/room/car/landsize/buidling area has positive correlation to the house prices. 
 2. Based on the algorithm, NearbySchools / Distance from CBD / Year Built / Crime Rate has insignificant impacts on the house prices. This will be shown in the tableau visualisation later as well. 
 3. We have gone through by implementing different machine learning algorithms, random forest shows the highest score ; Hence, this model has been used to predict the house price in web application later. Comparison result is shown above.
-![heatmap image](images/heatmap.PNG)
+![heatmap image](images/heatmap.png)
 
 ### Screenshot of the application
 
