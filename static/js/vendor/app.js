@@ -108,27 +108,29 @@ function isNumeric(num) {
 }
 
 function extract_form_data() {
-  let form_data = {};
-  for (let i = 0; i < form_ids.length; i++) {
-    if (!isCharNumber(form_ids[i].charAt(0))) {
-      form_input = document.querySelector("#" + form_ids[i]);
-    } else {
-      form_input = document.querySelector("#" + form_id_tranform[form_ids[i]]);
-    }
-    if (form_input == null) {
-      if (categorical_features.includes(form_ids[i])) {
-        form_data[form_ids[i]] = ["NA"];
-      } else {
-        form_data[form_ids[i]] = [0];
-      }
-    } else {
-      let form_value = form_input.value;
-      if (isNumeric(form_value)) {
-        form_value = parseFloat(form_value);
-      }
-      form_data[form_ids[i]] = [form_value];
-    }
-  }
+  let numberOfRoom = document.querySelector("#RoomNumber").value;
+  let distance = document.querySelector("#DistanceFromCBD").value;
+  let numberOfBathroom = document.querySelector("#NumberOfBathroom").value;
+  let numberOfCarPark = document.querySelector("#NumberOfCarPark").value;
+  let landSize = document.querySelector("#AmountOfLandSize").value;
+  let buildingArea = document.querySelector("#AmountOfBuildingArea").value;
+  let yearBuilt = document.querySelector("#YearBuiltRanges").value;
+  let propertyCount = document.querySelector("#NumberOfPropertyCount").value;
+  let crimeRate = document.querySelector("#NumberOfCrimeRate").value;
+  let nearbySchools = document.querySelector("#NumberOfNearbySchools").value;
+
+  let form_data = {"RoomNumber": numberOfRoom,
+  "DistanceFromCBD":distance,
+  "NumberOfBathroom":numberOfBathroom,
+  "NumberOfCarPark":numberOfCarPark,
+  "AmountOfLandSize":landSize,
+  "AmountOfBuildingArea":buildingArea,
+  "YearBuiltRanges":yearBuilt,
+  "NumberOfPropertyCount":propertyCount,
+  "NumberOfCrimeRate":crimeRate,
+  "NumberOfNearbySchools":nearbySchools
+};
+
   return form_data;
 }
 
