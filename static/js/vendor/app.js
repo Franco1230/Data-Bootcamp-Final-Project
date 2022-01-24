@@ -43,21 +43,6 @@ async function postData(url = "", data = {}) {
   return response.json();
 }
 
-function submit_request() {
-  clear_screen();
-  add_screen("Making request to server");
-
-  const form_data = extract_form_data();
-  add_screen(JSON.stringify(form_data));
-
-  postData("/predict", form_data).then((res) => {
-    add_screen(JSON.stringify(res));
-    display();
-  });
-
-  display();
-}
-
 function predictPrice() {
   const form_data = extract_form_data();
 
@@ -70,42 +55,10 @@ function predictPrice() {
     });
 }
 
-const form_ids = [
-  "Rooms",
-  "Distance",
-  "Bathroom",
-  "Car",
-  "Landsize",
-  "BuildingArea",
-  "YearBuilt",
-  "Propertycount",
-  "CrimeRate",
-  "NearbySchools",
-];
-
-const form_id_tranform = {};
-
 function isCharNumber(c) {
   return c >= "0" && c <= "9";
 }
 
-const categorical_features = [];
-
-const integer_features = [
-  "Rooms",
-  "Bathroom",
-  "Car",
-  "Landsize",
-  "BuildingArea",
-  "YearBuilt",
-  "Propertycount",
-  "CrimeRate",
-  "NearbySchools",
-];
-
-function isNumeric(num) {
-  return !isNaN(num);
-}
 
 function extract_form_data() {
   let numberOfRoom = document.querySelector("#RoomNumber").value;
@@ -148,10 +101,9 @@ function buildResults(price) {
   // Add relevant classes
   priceElement.classList.add("type-h3");
   yourPriceElement.classList.add("type-sh6");
-  // containerElement.classList.add('container-fluid');
 
   // Set inner text for the elements
-  yourPriceElement.innerText = "The estimated price is";
+  yourPriceElement.innerText = "The estimated price is:";
   priceElement.innerText = USDFormatter.format(parseInt(price));
 
   // Add elements to container
@@ -160,66 +112,3 @@ function buildResults(price) {
 
   return containerElement;
 }
-
-if ($(".side-navigation").length) {
-  var closeBtn = $(".close");
-  var sideAffix = $(".side-navigation-affix");
-  var sideBtn = $("a.navigation-btn");
-  var sideNav = $(".side-navigation-large");
-  var sideSection = $(".navigation-section");
-  var sideTopSpacing = 48;
-
-  if ($(".side-navigation-small").length) {
-    sideNav = $(".side-navigation-small");
-  }
-
-  var topOffset = sideSection.offset().top - sideTopSpacing;
-  var bottomOffset =
-    $("body").height() - sideSection.offset().top - sideSection.height();
-
-  sideAffix.affix({
-    offset: {
-      top: topOffset,
-      bottom: bottomOffset,
-    },
-  });
-
-  sideAffix.width(sideNav.parent().width());
-
-  sideBtn.on("click", function () {
-    sideNav.css("display", "block");
-    sideSection.css("display", "none");
-    sideBtn.css("display", "none");
-    $("body").css("overflow", "hidden");
-  });
-  closeBtn.on("click", function () {
-    sideNav.css("display", "");
-    sideSection.css("display", "");
-    sideBtn.css("display", "inline-block");
-    $("body").css("overflow", "");
-  });
-}
-
-$(function () {
-  $('[data-scroll="smooth"] a[href*=#]:not([href=#])').click(function () {
-    if (
-      location.pathname.replace(/^\//, "") ===
-        this.pathname.replace(/^\//, "") &&
-      location.hostname === this.hostname
-    ) {
-      var target = $(this.hash);
-      target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
-
-      if (target.length) {
-        $("html, body").animate(
-          {
-            scrollTop: target.offset().top,
-          },
-          1500
-        );
-
-        return false; // prevent default href
-      }
-    }
-  });
-});

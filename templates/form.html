@@ -1,121 +1,77 @@
 <form>
-    <div id="General_id" class="type-h3">
-        <h2>
-            House Properties
-        </h2>
-    </div>
-    <div class="form-group">
-        <label for="RoomNumber">Number of Rooms:</label>
-        <div class="container-fuild">
-            <div class="row">
-                <div class="col-md-5">
-                    <input type="number" class="form-control" id="RoomNumber" placeholder="1" value="1" />
+    <div class="container">
+        <div id="General_id" class="type-h3">
+            <h2>
+                House Properties
+            </h2>
+        </div>  
+        <div class="form-group">
+            <div class="container-fuild">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="RoomNumber">Number of Rooms:</label>
+                        <input type="number" class="form-control" id="RoomNumber" placeholder="1-12" value="1" />
+                    </div>
+                    <div class="col-md-4">
+                        <label for="DistanceFromCBD">Distance From CBD:</label>
+                        <input type="number" class="form-control" id="DistanceFromCBD" placeholder="0-50" value="0" />
+                    </div>
+                    <div class="col-md-4">
+                        <label for="NumberOfBathroom">Number of Bathroom:</label>
+                        <input type="number" class="form-control" id="NumberOfBathroom" placeholder="0-9" value="0" />
+                    </div>
+                    <div class="col-md-4">
+                        <label for="NumberOfCarPark">Number of Car Space:</label>
+                        <input type="number" class="form-control" id="NumberOfCarPark" placeholder="0-18" value="0" />
+                    </div>
+                    <div class="col-md-4">
+                        <label for="AmountOfLandSize">Amount of Land Size:</label>
+                        <input type="number" class="form-control" id="AmountOfLandSize" placeholder="1-434000"
+                            value="1" />
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label for="DistanceFromCBD">Distance From CBD:</label>
-        <div class="container-fuild">
-            <div class="row">
-                <div class="col-md-5">
-                    <input type="number" class="form-control" id="DistanceFromCBD" placeholder="Very close to CBD"
-                        value="Very close to CBD" />
+        <div class="form-group">
+            <div class="container-fuild">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="AmountOfBuildingArea">Amount of Building Area:</label>
+                        <input type="number" class="form-control" id="AmountOfBuildingArea" placeholder="1-45000"
+                            value="1" />
+                    </div>
+                    <div class="col-md-4">
+                        <label for="NumberOfPropertyCount">Property Count:</label>
+                        <input type="number" class="form-control" id="NumberOfPropertyCount" placeholder="83-21650"
+                            value="83" />
+                    </div>
+                    <div class="col-md-4">
+                        <label for="YearBuiltRanges">Year Built:</label>
+                        <input type="number" class="form-control" id="YearBuiltRanges" placeholder="1830-2019"
+                            value="1830" />
+                    </div>
+                    <div class="col-md-4">
+                        <label for="NumberOfCrimeRate">Crime Rate Number:</label>
+                        <input type="number" class="form-control" id="NumberOfCrimeRate" placeholder="55-1013"
+                            value="55" />
+                    </div>
+                    <div class="col-md-4">
+                        <label for="NumberOfNearbySchools">Nearby Schools Count:</label>
+                        <input type="number" class="form-control" id="NumberOfNearbySchools" placeholder="0-26"
+                            value="0" />
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label for="NumberOfBathroom">Number of Bathroom:</label>
-        <div class="container-fuild">
-            <div class="row">
-                <div class="col-md-5">
-                    <input type="number" class="form-control" id="NumberOfBathroom" placeholder="0" value="0" />
-                </div>
+        <div class="form-group">
+            <div id="results"></div>
+        </div>
+        <div class="form-group">
+            <div class="btn-group">
+                <a class="btn btn-primary" onclick="predictPrice()">Predict Price</a>
+                <a class="btn btn-default" onclick="clear_results()">Clear</a>
             </div>
         </div>
     </div>
-    <div class="form-group">
-        <label for="NumberOfCarPark">Number of Car Space:</label>
-        <div class="container-fuild">
-            <div class="row">
-                <div class="col-md-5">
-                    <input type="number" class="form-control" id="NumberOfCarPark" placeholder="0" value="0" />
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="AmountOfLandSize">Amount of Land Size:</label>
-        <div class="container-fuild">
-            <div class="row">
-                <div class="col-md-5">
-                    <input type="number" class="form-control" id="AmountOfLandSize" placeholder="1-100" value="1-100" />
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="AmountOfBuildingArea">Amount of Building Area:</label>
-        <div class="container-fuild">
-            <div class="row">
-                <div class="col-md-5">
-                    <input type="number" class="form-control" id="AmountOfBuildingArea" placeholder="1-100"
-                        value="1-100" />
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="YearBuiltRanges">Year Built Ranges:</label>
-        <div class="container-fuild">
-            <div class="row">
-                <div class="col-md-5">
-                    <input type="number" class="form-control" id="YearBuiltRanges" placeholder="1861-1870"
-                        value="1861-1870" />
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="NumberOfPropertyCount">Number of Property in the Area:</label>
-        <div class="container-fuild">
-            <div class="row">
-                <div class="col-md-5">
-                    <input type="number" class="form-control" id="NumberOfPropertyCount" placeholder="Very Low"
-                        value="Very Low" />
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="NumberOfCrimeRate">Number of Crime Rate:</label>
-        <div class="container-fuild">
-            <div class="row">
-                <div class="col-md-5">
-                    <input type="number" class="form-control" id="NumberOfCrimeRate" placeholder="Very Low"
-                        value="Very Low" />
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="NumberOfNearbySchools">Number of Nearby Schools:</label>
-        <div class="container-fuild">
-            <div class="row">
-                <div class="col-md-5">
-                    <input type="number" class="form-control" id="NumberOfNearbySchools" placeholder="0" value="0" />
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="form-group">
-        <div id="results"></div>
-    </div>
-    <div class="form-group">
-        <div class="btn-group">
-            <a class="btn btn-primary" onclick="predictPrice()">Predict Price</a>
-            <a class="btn btn-default" onclick="clear_results()">Clear</a>
-        </div>
-    </div>
+
 </form>
