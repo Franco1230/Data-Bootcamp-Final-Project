@@ -5,6 +5,11 @@ House Price Prediction using Machine Learning Algorithm
 In this project, we are aiming to predict the housing prices in Melbourne Metro using Machine Learning algorithm to predict house prices based on various factors. The dataset that we are using includes the house selling data from 2016 to 2018(from Kaggle).
 Housing prices are an important reflection of the economy and knowing the housing price ranges are of great interest to both buyers and sellers. Knowing the real estate is booming, we are interested in understanding the main drive as it's highly believed that a house value is more than just the location or the land size. With the dataset that we have, we are going to incorporate all the features to make predictions that will be beneficial to the stakeholders.
 
+## Instructions to run
+1. Please run "python app.py" in gitbash
+2. Then access the web through http://127.0.0.1:5000/
+3. you are good to go to test the features out!
+
 
 ### Problem Statement
 The goal of this analysis is to help us understanding the relationship between different house features and how they are used to predict house price. 
@@ -78,8 +83,6 @@ Initial Layout
 
 With all the input
 ![web input image](images/prediction.PNG)
-
-
 
 
 
