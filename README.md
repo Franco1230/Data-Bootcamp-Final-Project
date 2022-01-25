@@ -2,12 +2,12 @@
 ## In associate with: Catherine, Hayley, Nasrin and Franco
 
 House Price Prediction using Machine Learning Algorithm
-In this project, we are aiming to predict the housing price in Melbourne Metro using Machine Learning to predict house prices based on various factors. The dataset that we are using includes the house selling data from 2016 to 2018(from Kaggle).
-As we all know that real estate is always a hot topic in Australia. We are interested in understanding the main drive as it's highly believed that a house value is more than just the location or the landsize. With the dataset that we have, we are going to incorporate all the features to understand the relationship between them. 
+In this project, we are aiming to predict the housing prices in Melbourne Metro using Machine Learning algorithm to predict house prices based on various factors. The dataset that we are using includes the house selling data from 2016 to 2018(from Kaggle).
+Housing prices are an important reflection of the economy and knowing the housing price ranges are of great interest to both buyers and sellers. Knowing the real estate is booming, we are interested in understanding the main drive as it's highly believed that a house value is more than just the location or the land size. With the dataset that we have, we are going to incorporate all the features to make predictions that will be beneficial to the stakeholders.
 
 
 ### Problem Statement
-The goal of this analysis is to help us understanding the relationship between different house features and how they are used to predict house price.
+The goal of this analysis is to help us understanding the relationship between different house features and how they are used to predict house price. 
 
 ### The benefits of Data Science in Real Estate Analysis
 1. For home buyers, they can use this to check a predictive market price based on their own ideal requirement of future house. 
@@ -56,6 +56,7 @@ The analysis is based on the factors that could potentially affect the house pri
 1. Tableau is used for visualization for the relationship between the features and the house prices. 
 2. We also used it to compare the results between the Actual Prices and Prediction Prices
 
+
 ## As the outcome, a simple web page is built for users to enter input (features) to predict house prices.
 ### Application
 We used python and flask to build the website and testing the results. We created a JSON map of features and values to allow user to freely choose. Once they make the request, the application will receive and return a response containing the predicted price.
@@ -68,8 +69,11 @@ We used python and flask to build the website and testing the results. We create
 ![heatmap image](images/heatmap.png)
 
 ## Screenshot of the application
+Initial Layout
+![comparison image](images/layout.PNG)
 
-
+With all the input
+![comparison image](images/prediction.PNG)
 
 
 
