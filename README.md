@@ -55,7 +55,11 @@ The analysis is based on the factors that could potentially affect the house pri
 ### Visualization Tool
 1. Tableau is used for visualization for the relationship between the features and the house prices. 
 2. We also used it to compare the results between the Actual Prices and Prediction Prices
+3. Link to tableau visualisation: https://public.tableau.com/app/profile/hayley.lim1475/viz/FinalProject_16428453496070/Story1#1
+4. Some examples as below:
 
+![tableau image](images/dashboard1.PNG)
+![tableau image](images/dashboard2.PNG)
 
 ## As the outcome, a simple web page is built for users to enter input (features) to predict house prices.
 ### Application
@@ -70,10 +74,10 @@ We used python and flask to build the website and testing the results. We create
 
 ## Screenshot of the application
 Initial Layout
-![comparison image](images/layout.PNG)
+![web image](images/layout.PNG)
 
 With all the input
-![comparison image](images/prediction.PNG)
+![web input image](images/prediction.PNG)
 
 
 
